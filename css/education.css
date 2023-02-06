@@ -1,0 +1,471 @@
+@import url(./common.css);
+main {
+  position: relative;
+  z-index: 5;
+}
+main .sub-header {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 10;
+}
+main .sub-header .sub-header-wrap {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0px;
+}
+main .sub-header .sub-header-wrap ul {
+  width: 100%;
+  height: 100%;
+}
+main .sub-header .sub-header-wrap ul li {
+  height: 100%;
+  display: inline-block;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+main .sub-header .sub-header-wrap ul li a {
+  padding: 0 20px;
+}
+main .sub-header .sub-header-wrap ul li.homebtn a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.major a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.minor a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li:last-child {
+  border-right: 1px solid #e0e0e0;
+}
+main .submenu-title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  padding-top: 100px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main .submenu-title h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 200px;
+}
+main .submenu-title img {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  -webkit-animation: textani 1000ms forwards;
+          animation: textani 1000ms forwards;
+}
+@-webkit-keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+main div.main-inner {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+}
+main div.main-inner .category {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+main div.main-inner .category ul {
+  display: flex;
+  justify-content: space-around;
+}
+main div.main-inner .category ul li {
+  flex-grow: 1;
+  padding: 25px 0;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  color: #999999;
+  font-weight: 500;
+}
+main div.main-inner .category ul li::after {
+  content: "|";
+  color: #e0e0e0;
+  display: block;
+  float: right;
+  transform: translateY(-2px);
+}
+main div.main-inner .category ul li:last-child::after {
+  display: none;
+}
+main div.main-inner .category ul li.this {
+  color: black;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  -webkit-animation: lineAni 300ms forwards;
+          animation: lineAni 300ms forwards;
+}
+@-webkit-keyframes lineAni {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes lineAni {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+main div.main-inner .edu-container {
+  margin: 60px 0;
+}
+main div.main-inner .edu-container .edu-titlebar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+main div.main-inner .edu-container .edu-titlebar h4 {
+  font-size: 32px;
+  line-height: 2.5;
+}
+main div.main-inner .edu-container .edu-titlebar div {
+  font-size: 17px;
+  overflow: hidden;
+}
+main div.main-inner .edu-container .edu-titlebar div a {
+  color: #266466;
+  display: block;
+  padding: 10px;
+}
+main div.main-inner .edu-container .edu-titlebar div a img {
+  transition: 300ms;
+}
+main div.main-inner .edu-container .edu-titlebar div a:hover img {
+  transform: translateX(10px);
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a {
+  width: 100%;
+  padding: 20px 0;
+  height: 280px;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  display: flex;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figure {
+  width: 25%;
+  height: 100%;
+  margin-right: 3%;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption {
+  width: 72%;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .badge {
+  display: inline-block;
+  width: 60px;
+  padding: 3px;
+  border: 1px solid #1f5153;
+  color: #1f5153;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption h6 {
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption p {
+  font-size: 16px;
+  line-height: 1.75;
+  height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul {
+  display: flex;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li {
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li:nth-child(1) {
+  width: 25%;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li:nth-child(2) {
+  width: 25%;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li:nth-child(3) {
+  width: 50%;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li dl {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Noto Sans KR", Sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  position: relative;
+  display: flex;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li dl dt {
+  width: 30px;
+  font-weight: 500;
+  padding-right: 5px;
+  font-size: 14px;
+}
+main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li dl dd {
+  width: calc(100% - 30px);
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    position: relative;
+    z-index: 5;
+  }
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 150px;
+  }
+  main .submenu-title img {
+    width: 80%;
+    position: absolute;
+    top: 10%;
+  }
+  @-webkit-keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  @keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  main div.main-inner {
+    width: 85%;
+  }
+  main div.main-inner .category ul li {
+    font-size: 15px;
+    flex-grow: 1;
+    padding: 20px 0;
+  }
+  main div.main-inner .edu-container {
+    margin: 20px 0;
+  }
+  main div.main-inner .edu-container .edu-titlebar h4 {
+    font-size: 24px;
+    line-height: 2.5;
+  }
+  main div.main-inner .edu-container .edu-titlebar div {
+    font-size: 14px;
+    overflow: hidden;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a {
+    width: 100%;
+    padding: 15px 0;
+    height: 280px;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: flex;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figure {
+    width: 30%;
+    height: 100%;
+    margin-right: 2%;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figure img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption {
+    width: 68%;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption h6 {
+    font-size: 20px;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption p {
+    font-size: 14px;
+    line-height: 1.5;
+    height: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    position: relative;
+    z-index: 5;
+  }
+  main .sub-header {
+    display: none;
+  }
+  main .submenu-title {
+    height: 200px;
+  }
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  main .submenu-title img {
+    width: 100%;
+  }
+  main div.main-inner {
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
+  }
+  main div.main-inner .category {
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+  }
+  main div.main-inner .category ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main div.main-inner .category ul li {
+    width: 50%;
+    flex-grow: inherit;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border;
+  }
+  main div.main-inner .category ul li::after {
+    display: none;
+  }
+  main div.main-inner .category ul li:last-child {
+    border-bottom: none;
+  }
+  main div.main-inner .category ul li:nth-child(odd) {
+    border-right: 1px solid #e0e0e0;
+    box-sizing: border-box;
+  }
+  main div.main-inner .edu-container {
+    margin: 20px 0;
+  }
+  main div.main-inner .edu-container .edu-titlebar h4 {
+    font-size: 20px;
+    line-height: 2;
+  }
+  main div.main-inner .edu-container .edu-titlebar div {
+    display: none;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a {
+    width: 100%;
+    height: inherit;
+    flex-direction: column;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figure {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figure img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption {
+    width: 100%;
+    margin-top: 20px;
+    height: inherit;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .badge {
+    display: inline-block;
+    width: 60px;
+    padding: 3px;
+    border: 1px solid #1f5153;
+    color: #1f5153;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption h6 {
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 2;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption p {
+    display: none;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul {
+    display: flex;
+    flex-direction: column;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li:nth-child(1) {
+    width: 100%;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li:nth-child(2) {
+    width: 100%;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li:nth-child(3) {
+    width: 100%;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li dl dt {
+    font-size: 12px;
+  }
+  main div.main-inner .edu-container .edu-contents-wrapper .edu-content a figcaption .edu-info ul li dl dd {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=education.css.map */

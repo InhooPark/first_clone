@@ -1,0 +1,362 @@
+@import url(./common.css);
+@mixin box($color: black) {
+  border: 1px solid $color;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  z-index: 5;
+  .sub-header {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 10;
+    .sub-header-wrap {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 0px;
+      ul {
+        width: 100%;
+        height: 100%;
+        li {
+          height: 100%;
+          display: inline-block;
+          border-left: 1px solid #e0e0e0;
+          font-size: 16px;
+          line-height: 50px;
+          vertical-align: middle;
+          a {
+            padding: 0 20px;
+          }
+          &.homebtn {
+            a {
+              display: block;
+              width: 50px;
+              height: 50px;
+              padding: 0;
+              background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+            }
+          }
+          &.major {
+            a {
+              display: block;
+              width: 130px;
+              height: 50px;
+              font-size: 14px;
+              background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+            }
+          }
+          &.minor {
+            a {
+              display: block;
+              width: 130px;
+              height: 50px;
+              font-size: 14px;
+              background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+            }
+          }
+          &:last-child {
+            border-right: 1px solid #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+  .submenu-title {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    padding-top: 100px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      line-height: 200px;
+    }
+    img {
+      position: absolute;
+      top: 0%;
+      left: 90%;
+      animation: textani 1000ms forwards;
+    }
+    @keyframes textani {
+      0% {
+        left: 90%;
+      }
+      100% {
+        left: 50%;
+      }
+    }
+  }
+  div.museum-visual {
+    height: 400px;
+    margin-bottom: 85px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  div.main-inner {
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    h4 {
+      font-size: 32px;
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 2rem;
+      line-height: 1.5;
+
+      &.stitle {
+        font-size: 32px;
+        line-height: normal;
+        b {
+          font-weight: 500;
+        }
+      }
+    }
+
+    div.leftside {
+      width: 35%;
+    }
+    div.rightside {
+      width: 65%;
+    }
+
+    div.top-content {
+      display: flex;
+      margin-bottom: 5rem;
+    }
+    div.bottom-content {
+      display: flex;
+      div.rightside {
+        div.imggrid {
+          @include box(#e0e0e0);
+          position: relative;
+          width: 100%;
+          padding-top: 60%;
+          background: url("../img/svg/grid.svg") repeat;
+
+          img {
+            position: absolute;
+            display: block;
+            width: 30%;
+
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        div.download {
+          // 호버이벤트 넣어야함
+          div {
+            margin: 30px 15px 0 0;
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            @include box(#e0e0e0);
+
+            a {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              justify-content: center;
+              align-items: center;
+              img {
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    position: relative;
+    z-index: 5;
+    .submenu-title {
+      height: 250px;
+      h2 {
+        font-size: 48px;
+        line-height: 100px;
+      }
+      img {
+        width: 80%;
+        position: absolute;
+        top: 10%;
+      }
+      @keyframes textani {
+        0% {
+          left: 90%;
+        }
+        100% {
+          left: 30%;
+        }
+      }
+    }
+    div.museum-visual {
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    div.main-inner {
+      width: 85%;
+      h4 {
+        display: none;
+      }
+      p {
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        font-size: 14px;
+        &.stitle {
+          font-size: 28px;
+        }
+      }
+      div.leftside {
+        width: 0;
+      }
+      div.rightside {
+        width: 100%;
+      }
+
+      div.top-content {
+        display: flex;
+        margin-bottom: 3rem;
+      }
+      div.bottom-content {
+        display: flex;
+        div.rightside {
+          div.imggrid {
+            @include box(#e0e0e0);
+            position: relative;
+            width: 100%;
+            padding-top: 60%;
+            background: url("../img/svg/grid.svg") repeat;
+
+            img {
+              position: absolute;
+              display: block;
+              width: 30%;
+
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          div.download {
+            display: flex;
+            justify-content: space-between;
+            div {
+              margin: 20px 0 0 0;
+              display: inline-block;
+              width: 30%;
+              height: 50px;
+              @include box(#e0e0e0);
+              box-sizing: border-box;
+              a {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                img {
+                  margin-right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .sub-header {
+      display: none;
+    }
+    .submenu-title {
+      height: 200px;
+      h2 {
+        font-size: 38px;
+        line-height: 50px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    div.museum-visual {
+      height: 300px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    div.main-inner {
+      width: 95%;
+      h4 {
+        font-size: 32px;
+        font-weight: bold;
+      }
+      p {
+        margin-bottom: 2rem;
+        line-height: 1.5;
+        font-size: 12px;
+
+        &.stitle {
+          font-size: 20px;
+          word-break: keep-all;
+          line-height: normal;
+          b {
+            font-weight: 500;
+          }
+        }
+      }
+
+      div.top-content {
+        margin-bottom: 2rem;
+      }
+      div.bottom-content {
+        div.rightside {
+          div.download {
+            display: flex;
+            flex-direction: column;
+            div {
+              margin: 5px 0 0 0;
+              width: 100%;
+              height: 50px;
+              @include box(#e0e0e0);
+              &:first-child {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

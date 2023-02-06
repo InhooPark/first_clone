@@ -1,0 +1,261 @@
+@import url(./common.css);
+main {
+  position: relative;
+  z-index: 5;
+}
+main .sub-header {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 10;
+}
+main .sub-header .sub-header-wrap {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0px;
+}
+main .sub-header .sub-header-wrap ul {
+  width: 100%;
+  height: 100%;
+}
+main .sub-header .sub-header-wrap ul li {
+  height: 100%;
+  display: inline-block;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+main .sub-header .sub-header-wrap ul li a {
+  padding: 0 20px;
+}
+main .sub-header .sub-header-wrap ul li.homebtn a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.major a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.minor a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li:last-child {
+  border-right: 1px solid #e0e0e0;
+}
+main .submenu-title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  padding-top: 100px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main .submenu-title h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 200px;
+}
+main .submenu-title img {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  -webkit-animation: textani 1000ms forwards;
+          animation: textani 1000ms forwards;
+}
+@-webkit-keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+main div.main-inner {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+}
+main div.main-inner .archive {
+  text-align: end;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: end;
+}
+main div.main-inner .archive .archive-text-wrap {
+  width: 100px;
+  padding: 20px;
+  cursor: pointer;
+}
+main div.main-inner .archive .archive-text-wrap > span {
+  color: #266466;
+}
+main div.main-inner .archive .archive-text-wrap > img {
+  padding-left: 5px;
+  transition: 300ms;
+}
+main div.main-inner .archive .archive-text-wrap:hover img {
+  transform: translateX(10px);
+}
+main div.main-inner .exh-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main div.main-inner .exh-container .exh-contents-wrapper {
+  width: 48%;
+  margin-bottom: 50px;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figure {
+  margin-bottom: 30px;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figure .exh-img-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figure .exh-img-wrap img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(1);
+  transition: 600ms;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figcaption .badge {
+  display: inline-block;
+  width: 60px;
+  padding: 3px;
+  border: 1px solid #1f5153;
+  color: #1f5153;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figcaption h6 {
+  font-size: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 2;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figcaption .exh-info dl {
+  font-size: 14px;
+  line-height: 2;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figcaption .exh-info dl dt {
+  display: inline-block;
+  width: 42px;
+  font-weight: bold;
+}
+main div.main-inner .exh-container .exh-contents-wrapper a figcaption .exh-info dl dd {
+  display: inline-block;
+  width: calc(100% - 46px);
+}
+main div.main-inner .exh-container .exh-contents-wrapper a:hover figure .exh-img-wrap img {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 1024px) {
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 150px;
+  }
+  main .submenu-title img {
+    width: 80%;
+    position: absolute;
+    top: 10%;
+  }
+  @-webkit-keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  @keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  main div.main-inner .exh-container .exh-contents-wrapper a figcaption h6 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .sub-header {
+    display: none;
+  }
+  main .submenu-title {
+    height: 200px;
+  }
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  main .submenu-title img {
+    width: 100%;
+  }
+  main div.main-inner {
+    width: 95%;
+  }
+  main div.main-inner .archive {
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+  }
+  main div.main-inner .archive .archive-text-wrap > img {
+    height: 70%;
+  }
+  main div.main-inner .exh-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  main div.main-inner .exh-container .exh-contents-wrapper {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  main div.main-inner .exh-container .exh-contents-wrapper a figure {
+    margin-bottom: 20px;
+  }
+  main div.main-inner .exh-container .exh-contents-wrapper a figcaption h6 {
+    font-size: 20px;
+  }
+  main div.main-inner .exh-container .exh-contents-wrapper a figcaption .exh-info dl {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=exhibition.css.map */

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="8" height="4" viewBox="0 0 8 4">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#FFF">
+            <g>
+                <path d="M4 0L8 4 0 4z" transform="translate(-1459 -39) translate(1377 7) matrix(1 0 0 -1 82 36)"/>
+            </g>
+        </g>
+    </g>
+</svg>

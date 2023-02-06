@@ -1,0 +1,484 @@
+@import url(./common.css);
+@mixin box($color: black) {
+  border: 1px solid $color;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  z-index: 5;
+  .sub-header {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 10;
+    .sub-header-wrap {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 0px;
+      ul {
+        width: 100%;
+        height: 100%;
+        li {
+          height: 100%;
+          display: inline-block;
+          border-left: 1px solid #e0e0e0;
+          font-size: 16px;
+          line-height: 50px;
+          vertical-align: middle;
+          a {
+            padding: 0 20px;
+          }
+          &.homebtn {
+            a {
+              display: block;
+              width: 50px;
+              height: 50px;
+              padding: 0;
+              background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+            }
+          }
+          &.major {
+            a {
+              display: block;
+              width: 130px;
+              height: 50px;
+              font-size: 14px;
+              background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+            }
+          }
+          &.minor {
+            a {
+              display: block;
+              width: 130px;
+              height: 50px;
+              font-size: 14px;
+              background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+            }
+          }
+          &:last-child {
+            border-right: 1px solid #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+  .submenu-title {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    padding-top: 100px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      line-height: 200px;
+    }
+    img {
+      position: absolute;
+      top: 0%;
+      left: 90%;
+      animation: textani 1000ms forwards;
+    }
+    @keyframes textani {
+      0% {
+        left: 90%;
+      }
+      100% {
+        left: 50%;
+      }
+    }
+  }
+  div.main-inner {
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    .category {
+      border: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        li {
+          flex-grow: 1;
+          padding: 25px 0;
+          text-align: center;
+          position: relative;
+          cursor: pointer;
+          color: #999999;
+          font-weight: 500;
+          &::after {
+            content: "|";
+            color: #e0e0e0;
+            display: block;
+            float: right;
+            transform: translateY(-2px);
+          }
+          &:last-child::after {
+            display: none;
+          }
+          &.this {
+            color: black;
+            border-bottom: 2px solid black;
+            box-sizing: border-box;
+            animation: lineAni 300ms forwards;
+          }
+          @keyframes lineAni {
+            0% {
+              transform: scaleX(0);
+            }
+            100% {
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+    .edu-container {
+      margin: 60px 0;
+      .edu-titlebar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        h4 {
+          font-size: 32px;
+          line-height: 2.5;
+        }
+        div {
+          font-size: 17px;
+          overflow: hidden;
+          a {
+            color: #266466;
+            display: block;
+            padding: 10px;
+            img {
+              transition: 300ms;
+            }
+            &:hover img {
+              transform: translateX(10px);
+            }
+          }
+        }
+      }
+      .edu-contents-wrapper {
+        .edu-content {
+          a {
+            width: 100%;
+            padding: 20px 0;
+            height: 280px;
+            border-bottom: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            display: flex;
+            figure {
+              width: 25%;
+              height: 100%;
+              margin-right: 3%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            figcaption {
+              width: 72%;
+              .badge {
+                display: inline-block;
+                width: 60px;
+                padding: 3px;
+                border: 1px solid #1f5153;
+                color: #1f5153;
+                font-size: 12px;
+                font-weight: bold;
+                text-align: center;
+              }
+              h6 {
+                font-size: 24px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                line-height: 2;
+              }
+              p {
+                font-size: 16px;
+                line-height: 1.75;
+                height: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .edu-info {
+                ul {
+                  display: flex;
+                  li {
+                    padding-right: 20px;
+                    box-sizing: border-box;
+                    &:nth-child(1) {
+                      width: 25%;
+                    }
+                    &:nth-child(2) {
+                      width: 25%;
+                    }
+                    &:nth-child(3) {
+                      width: 50%;
+                    }
+                    dl {
+                      margin: 0;
+                      padding: 0;
+                      border: 0;
+                      font-family: "Noto Sans KR", Sans-serif;
+                      font-weight: 400;
+                      font-size: 16px;
+                      color: #333;
+                      position: relative;
+                      display: flex;
+                      dt {
+                        width: 30px;
+                        font-weight: 500;
+                        padding-right: 5px;
+                        font-size: 14px;
+                      }
+                      dd {
+                        width: calc(100% - 30px);
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    position: relative;
+    z-index: 5;
+    .submenu-title {
+      h2 {
+        font-size: 48px;
+        line-height: 150px;
+      }
+      img {
+        width: 80%;
+        position: absolute;
+        top: 10%;
+      }
+      @keyframes textani {
+        0% {
+          left: 90%;
+        }
+        100% {
+          left: 30%;
+        }
+      }
+    }
+    div.main-inner {
+      width: 85%;
+      .category {
+        ul {
+          li {
+            font-size: 15px;
+            flex-grow: 1;
+            padding: 20px 0;
+          }
+        }
+      }
+      .edu-container {
+        margin: 20px 0;
+        .edu-titlebar {
+          h4 {
+            font-size: 24px;
+            line-height: 2.5;
+          }
+          div {
+            font-size: 14px;
+            overflow: hidden;
+          }
+        }
+        .edu-contents-wrapper {
+          .edu-content {
+            a {
+              width: 100%;
+              padding: 15px 0;
+              height: 280px;
+              border-bottom: 1px solid #e0e0e0;
+              box-sizing: border-box;
+              display: flex;
+              figure {
+                width: 30%;
+                height: 100%;
+                margin-right: 2%;
+                img {
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+              figcaption {
+                width: 68%;
+                h6 {
+                  font-size: 20px;
+                }
+                p {
+                  font-size: 14px;
+                  line-height: 1.5;
+                  height: 170px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    position: relative;
+    z-index: 5;
+    .sub-header {
+      display: none;
+    }
+    .submenu-title {
+      height: 200px;
+      h2 {
+        font-size: 48px;
+        line-height: 50px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    div.main-inner {
+      width: 95%;
+      position: relative;
+      margin: 0 auto;
+      .category {
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li {
+            width: 50%;
+            flex-grow: inherit;
+            border-bottom: 1px solid #e0e0e0;
+            box-sizing: border;
+            &::after {
+              display: none;
+            }
+            &:last-child {
+              border-bottom: none;
+            }
+            &:nth-child(odd) {
+              border-right: 1px solid #e0e0e0;
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+      .edu-container {
+        margin: 20px 0;
+        .edu-titlebar {
+          h4 {
+            font-size: 20px;
+            line-height: 2;
+          }
+          div {
+            display: none;
+          }
+        }
+        .edu-contents-wrapper {
+          .edu-content {
+            a {
+              width: 100%;
+              height: inherit;
+              flex-direction: column;
+              figure {
+                width: 100%;
+                height: 100%;
+                margin-right: 0;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              figcaption {
+                width: 100%;
+                margin-top: 20px;
+                height: inherit;
+                .badge {
+                  display: inline-block;
+                  width: 60px;
+                  padding: 3px;
+                  border: 1px solid #1f5153;
+                  color: #1f5153;
+                  font-size: 12px;
+                  font-weight: bold;
+                  text-align: center;
+                }
+                h6 {
+                  font-size: 16px;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  line-height: 2;
+                }
+                p {
+                  display: none;
+                }
+                .edu-info {
+                  ul {
+                    display: flex;
+                    flex-direction: column;
+                    li {
+                      &:nth-child(1) {
+                        width: 100%;
+                      }
+                      &:nth-child(2) {
+                        width: 100%;
+                      }
+                      &:nth-child(3) {
+                        width: 100%;
+                      }
+                      dl {
+                        dt {
+                          font-size: 12px;
+                        }
+                        dd {
+                          font-size: 12px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

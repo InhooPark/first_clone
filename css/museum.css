@@ -1,0 +1,345 @@
+@import url(./common.css);
+main {
+  position: relative;
+  z-index: 5;
+}
+main .sub-header {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 10;
+}
+main .sub-header .sub-header-wrap {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0px;
+}
+main .sub-header .sub-header-wrap ul {
+  width: 100%;
+  height: 100%;
+}
+main .sub-header .sub-header-wrap ul li {
+  height: 100%;
+  display: inline-block;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+main .sub-header .sub-header-wrap ul li a {
+  padding: 0 20px;
+}
+main .sub-header .sub-header-wrap ul li.homebtn a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.major a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.minor a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li:last-child {
+  border-right: 1px solid #e0e0e0;
+}
+main .submenu-title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  padding-top: 100px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main .submenu-title h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 200px;
+}
+main .submenu-title img {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  -webkit-animation: textani 1000ms forwards;
+          animation: textani 1000ms forwards;
+}
+@-webkit-keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+main div.museum-visual {
+  height: 400px;
+  margin-bottom: 85px;
+  overflow: hidden;
+}
+main div.museum-visual img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main div.main-inner {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+}
+main div.main-inner h4 {
+  font-size: 32px;
+  font-weight: bold;
+}
+main div.main-inner p {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+main div.main-inner p.stitle {
+  font-size: 32px;
+  line-height: normal;
+}
+main div.main-inner p.stitle b {
+  font-weight: 500;
+}
+main div.main-inner div.leftside {
+  width: 35%;
+}
+main div.main-inner div.rightside {
+  width: 65%;
+}
+main div.main-inner div.top-content {
+  display: flex;
+  margin-bottom: 5rem;
+}
+main div.main-inner div.bottom-content {
+  display: flex;
+}
+main div.main-inner div.bottom-content div.rightside div.imggrid {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  background: url("../img/svg/grid.svg") repeat;
+}
+main div.main-inner div.bottom-content div.rightside div.imggrid img {
+  position: absolute;
+  display: block;
+  width: 30%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main div.main-inner div.bottom-content div.rightside div.download div {
+  margin: 30px 15px 0 0;
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+main div.main-inner div.bottom-content div.rightside div.download div a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+main div.main-inner div.bottom-content div.rightside div.download div a img {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    position: relative;
+    z-index: 5;
+  }
+  main .submenu-title {
+    height: 250px;
+  }
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 100px;
+  }
+  main .submenu-title img {
+    width: 80%;
+    position: absolute;
+    top: 10%;
+  }
+  @-webkit-keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  @keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  main div.museum-visual {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  main div.main-inner {
+    width: 85%;
+  }
+  main div.main-inner h4 {
+    display: none;
+  }
+  main div.main-inner p {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  main div.main-inner p.stitle {
+    font-size: 28px;
+  }
+  main div.main-inner div.leftside {
+    width: 0;
+  }
+  main div.main-inner div.rightside {
+    width: 100%;
+  }
+  main div.main-inner div.top-content {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+  main div.main-inner div.bottom-content {
+    display: flex;
+  }
+  main div.main-inner div.bottom-content div.rightside div.imggrid {
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    background: url("../img/svg/grid.svg") repeat;
+  }
+  main div.main-inner div.bottom-content div.rightside div.imggrid img {
+    position: absolute;
+    display: block;
+    width: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main div.main-inner div.bottom-content div.rightside div.download {
+    display: flex;
+    justify-content: space-between;
+  }
+  main div.main-inner div.bottom-content div.rightside div.download div {
+    margin: 20px 0 0 0;
+    display: inline-block;
+    width: 30%;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  main div.main-inner div.bottom-content div.rightside div.download div a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  main div.main-inner div.bottom-content div.rightside div.download div a img {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .sub-header {
+    display: none;
+  }
+  main .submenu-title {
+    height: 200px;
+  }
+  main .submenu-title h2 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  main .submenu-title img {
+    width: 100%;
+  }
+  main div.museum-visual {
+    height: 300px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  main div.museum-visual img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main div.main-inner {
+    width: 95%;
+  }
+  main div.main-inner h4 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  main div.main-inner p {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+  main div.main-inner p.stitle {
+    font-size: 20px;
+    word-break: keep-all;
+    line-height: normal;
+  }
+  main div.main-inner p.stitle b {
+    font-weight: 500;
+  }
+  main div.main-inner div.top-content {
+    margin-bottom: 2rem;
+  }
+  main div.main-inner div.bottom-content div.rightside div.download {
+    display: flex;
+    flex-direction: column;
+  }
+  main div.main-inner div.bottom-content div.rightside div.download div {
+    margin: 5px 0 0 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+  }
+  main div.main-inner div.bottom-content div.rightside div.download div:first-child {
+    margin-top: 20px;
+  }
+}/*# sourceMappingURL=museum.css.map */

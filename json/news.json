@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "badge": "전시",
+      "src": "./img/news/01.jpg",
+      "startdate": "2020-08-04",
+      "enddate": "",
+      "title": "재개관 상설전 《경기 국가근본의 땅》"
+    },
+    {
+      "badge": "교육",
+      "src": "./img/news/02.jpg",
+      "startdate": "2022-11-21",
+      "enddate": "2023-01-19",
+      "title": "경기도박물관 교원직무연수 참가 신청 안내"
+    },
+    {
+      "badge": "전시",
+      "src": "./img/news/03.jpg",
+      "startdate": "2022-11-29",
+      "enddate": "2023-03-26",
+      "title": "조선시대 지석 특별전 《경기 사대부의 삶과 격》"
+    }
+  ]
+}

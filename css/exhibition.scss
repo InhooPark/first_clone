@@ -1,0 +1,285 @@
+@import url(./common.css);
+@mixin box($color: black) {
+  border: 1px solid $color;
+  box-sizing: border-box;
+}
+main {
+  position: relative;
+  z-index: 5;
+  .sub-header {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 10;
+    .sub-header-wrap {
+      width: 80%;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 0px;
+      ul {
+        width: 100%;
+        height: 100%;
+        li {
+          height: 100%;
+          display: inline-block;
+          border-left: 1px solid #e0e0e0;
+          font-size: 16px;
+          line-height: 50px;
+          vertical-align: middle;
+          a {
+            padding: 0 20px;
+          }
+          &.homebtn {
+            a {
+              display: block;
+              width: 50px;
+              height: 50px;
+              padding: 0;
+              background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+            }
+          }
+          &.major {
+            a {
+              display: block;
+              width: 130px;
+              height: 50px;
+              font-size: 14px;
+              background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+            }
+          }
+          &.minor {
+            a {
+              display: block;
+              width: 130px;
+              height: 50px;
+              font-size: 14px;
+              background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+            }
+          }
+          &:last-child {
+            border-right: 1px solid #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+  .submenu-title {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    padding-top: 100px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    h2 {
+      text-align: center;
+      font-size: 60px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      line-height: 200px;
+    }
+    img {
+      position: absolute;
+      top: 0%;
+      left: 90%;
+      animation: textani 1000ms forwards;
+    }
+    @keyframes textani {
+      0% {
+        left: 90%;
+      }
+      100% {
+        left: 50%;
+      }
+    }
+  }
+  div.main-inner {
+    width: 75%;
+    position: relative;
+    margin: 0 auto;
+    .archive {
+      text-align: end;
+      font-size: 16px;
+      font-weight: 500;
+      border-bottom: 2px solid black;
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: end;
+      .archive-text-wrap {
+        width: 100px;
+        padding: 20px;
+        cursor: pointer;
+        > span {
+          color: #266466;
+        }
+        > img {
+          padding-left: 5px;
+          transition: 300ms;
+        }
+        &:hover img {
+          transform: translateX(10px);
+        }
+      }
+    }
+
+    .exh-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .exh-contents-wrapper {
+        width: 48%;
+        margin-bottom: 50px;
+        a {
+          figure {
+            margin-bottom: 30px;
+            .exh-img-wrap {
+              width: 100%;
+              overflow: hidden;
+              img {
+                width: 100%;
+                object-fit: cover;
+                transform: scale(1);
+                transition: 600ms;
+              }
+            }
+          }
+          figcaption {
+            .badge {
+              display: inline-block;
+              width: 60px;
+              padding: 3px;
+              border: 1px solid #1f5153;
+              color: #1f5153;
+              font-size: 12px;
+              font-weight: bold;
+              text-align: center;
+            }
+            h6 {
+              font-size: 32px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              line-height: 2;
+            }
+            .exh-info {
+              dl {
+                font-size: 14px;
+                line-height: 2;
+                dt {
+                  display: inline-block;
+                  width: 42px;
+                  font-weight: bold;
+                }
+                dd {
+                  display: inline-block;
+                  width: calc(100% - 46px);
+                }
+              }
+            }
+          }
+          &:hover figure .exh-img-wrap img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px){
+  main {
+    .submenu-title {
+      h2 {
+        font-size: 48px;
+        line-height: 150px;
+      }
+      img {
+        width: 80%;
+        position: absolute;
+        top: 10%;
+      }
+      @keyframes textani {
+        0% {
+          left: 90%;
+        }
+        100% {
+          left: 30%;
+        }
+      }
+    }
+    div.main-inner {
+      .exh-container {
+        .exh-contents-wrapper {
+          a {
+            figcaption {
+              h6 {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  main {
+    .sub-header {
+      display: none;
+    }
+    .submenu-title {
+      height: 200px;
+      h2 {
+        font-size: 48px;
+        line-height: 50px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    div.main-inner {
+      width: 95%;
+      .archive {
+        font-size: 12px;
+        border-bottom: 1px solid black;
+        margin-bottom: 20px;
+        .archive-text-wrap {
+          > img {
+            height: 70%;
+          }
+        }
+      }
+  
+      .exh-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .exh-contents-wrapper {
+          width: 100%;
+          margin-bottom: 30px;
+          a {
+            figure {
+              margin-bottom: 20px;
+            }
+            figcaption {
+              h6 {
+                font-size: 20px;
+              }
+              .exh-info {
+                dl {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

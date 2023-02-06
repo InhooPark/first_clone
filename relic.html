@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>경기도 박물관</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="./css/relic.css" />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/relic.js"></script>
+    <script defer src="./js/subcommon.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="sub-header">
+        <div class="sub-header-wrap">
+          <ul>
+            <li class="homebtn"><a href="#"></a></li>
+            <li class="major"><a href="#">유물</a></li>
+            <li class="minor"><a href="#">유물</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="submenu-title">
+        <h2>유물</h2>
+        <img src="./img/bgtext/collection.svg" />
+      </div>
+
+      <div class="main-inner">
+        <div class="searchbar">
+          <div class="searchbar-wrapper">
+            <input type="text" id="search-box" placeholder="검색어를 입력해주세요." />
+            <div class="searchicon-wrap">
+              <img src="./img/svg/search.svg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="relic-category">
+          <div class="category-wrapper">
+            <div class="category" id="all">
+              <span>전체보기</span>
+            </div>
+            <div class="category" id="painting">
+              <img src="./img/relic_thumb/img-sub-22-01.png" />
+              <span>서화</span>
+            </div>
+            <div class="category" id="ancidocument">
+              <img src="./img/relic_thumb/img-sub-22-02.png" />
+              <span>전적/고문서</span>
+            </div>
+            <div class="category" id="relic">
+              <img src="./img/relic_thumb/img-sub-22-03.png" />
+              <span>고고유물</span>
+            </div>
+            <div class="category" id="craft">
+              <img src="./img/relic_thumb/img-sub-22-04.png" />
+              <span>민속공예</span>
+            </div>
+            <div class="category" id="clothes">
+              <img src="./img/relic_thumb/img-sub-22-05.png" />
+              <span>복식</span>
+            </div>
+            <div class="category" id="ceramics">
+              <img src="./img/relic_thumb/img-sub-22-06.png" />
+              <span>도자</span>
+            </div>
+          </div>
+          <div class="filter-wrapper">
+            <div class="filter">
+              <img src="./img/svg/ic-filter-green-24-dp.svg" />
+              <span>필터</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relic-container grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 0 }'></div>
+      </div>
+    </main>
+  </body>
+</html>

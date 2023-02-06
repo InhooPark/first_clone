@@ -1,0 +1,339 @@
+@import url(./common.css);
+main {
+  position: relative;
+  z-index: 5;
+}
+main .sub-header {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 10;
+}
+main .sub-header .sub-header-wrap {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 0px;
+}
+main .sub-header .sub-header-wrap ul {
+  width: 100%;
+  height: 100%;
+}
+main .sub-header .sub-header-wrap ul li {
+  height: 100%;
+  display: inline-block;
+  border-left: 1px solid #e0e0e0;
+  font-size: 16px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+main .sub-header .sub-header-wrap ul li a {
+  padding: 0 20px;
+}
+main .sub-header .sub-header-wrap ul li.homebtn a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: url("../img/svg/ic-home-black-18-dp.svg") center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.major a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li.minor a {
+  display: block;
+  width: 130px;
+  height: 50px;
+  font-size: 14px;
+  background: url("../img/svg/ic-dropdown-black-12-dp.svg") right 20px center no-repeat;
+}
+main .sub-header .sub-header-wrap ul li:last-child {
+  border-right: 1px solid #e0e0e0;
+}
+main .submenu-title {
+  box-sizing: border-box;
+  width: 100%;
+  height: 300px;
+  padding-top: 100px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+main .submenu-title h2 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  line-height: 200px;
+}
+main .submenu-title img {
+  position: absolute;
+  top: 0%;
+  left: 90%;
+  -webkit-animation: textani 1000ms forwards;
+          animation: textani 1000ms forwards;
+}
+@-webkit-keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes textani {
+  0% {
+    left: 90%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+main div.main-inner {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+}
+main div.main-inner .search-container .searchbar {
+  text-align: center;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper input {
+  height: 50px;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 20px;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding-left: 20px;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding-left: 20px;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  letter-spacing: -1px;
+  padding-left: 20px;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper .searchicon-wrap {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+main div.main-inner .search-container .searchbar .searchbar-wrapper .searchicon-wrap img {
+  width: 24px;
+}
+main div.main-inner .search-container .search-content-table {
+  margin: 50px auto;
+  width: 100%;
+}
+main div.main-inner .search-container .search-content-table table {
+  border: none;
+  border-top: 2px solid black;
+  width: 100%;
+  text-align: center;
+}
+main div.main-inner .search-container .search-content-table table thead tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  line-height: 3;
+}
+main div.main-inner .search-container .search-content-table table thead tr th {
+  padding: 0 10px;
+}
+main div.main-inner .search-container .search-content-table table thead tr th:nth-child(1) {
+  width: 80px;
+}
+main div.main-inner .search-container .search-content-table table thead tr th:nth-child(3) {
+  width: 90px;
+}
+main div.main-inner .search-container .search-content-table table thead tr th:nth-child(4) {
+  width: 60px;
+}
+main div.main-inner .search-container .search-content-table table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  line-height: 3;
+}
+main div.main-inner .search-container .search-content-table table tbody tr td:nth-child(2) {
+  text-align: left;
+}
+
+@media screen and (max-width: 1024px) {
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 150px;
+  }
+  main .submenu-title img {
+    width: 80%;
+    position: absolute;
+    top: 10%;
+  }
+  @-webkit-keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  @keyframes textani {
+    0% {
+      left: 90%;
+    }
+    100% {
+      left: 30%;
+    }
+  }
+  main div.main-inner {
+    width: 85%;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper {
+    width: 80%;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input {
+    height: 40px;
+    font-size: 16px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input::-moz-placeholder {
+    padding-left: 15px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input:-ms-input-placeholder {
+    padding-left: 15px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input::placeholder {
+    padding-left: 15px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper .searchicon-wrap {
+    width: 40px;
+    height: 40px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper .searchicon-wrap img {
+    width: 20px;
+  }
+  main div.main-inner .search-container .search-content-table {
+    margin: 30px auto;
+  }
+  main div.main-inner .search-container .search-content-table table thead tr {
+    line-height: 2.5;
+    font-size: 14px;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr {
+    line-height: 2.5;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .sub-header {
+    display: none;
+  }
+  main .submenu-title {
+    height: 200px;
+  }
+  main .submenu-title h2 {
+    font-size: 48px;
+    line-height: 50px;
+  }
+  main .submenu-title img {
+    width: 100%;
+  }
+  main div.main-inner {
+    width: 95%;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    border-bottom: 2px solid black;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input {
+    height: 30px;
+    font-size: 14px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input::-moz-placeholder {
+    padding-left: 5px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input:-ms-input-placeholder {
+    padding-left: 5px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper input::placeholder {
+    padding-left: 5px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper .searchicon-wrap {
+    width: 30px;
+    height: 30px;
+  }
+  main div.main-inner .search-container .searchbar .searchbar-wrapper .searchicon-wrap img {
+    width: 16px;
+  }
+  main div.main-inner .search-container .search-content-table {
+    margin: 30px auto;
+    width: 100%;
+  }
+  main div.main-inner .search-container .search-content-table table {
+    border: none;
+    border-top: 2px solid black;
+    width: 100%;
+    text-align: center;
+  }
+  main div.main-inner .search-container .search-content-table table thead {
+    display: none;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr {
+    line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr td {
+    text-align: left;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr td:nth-child(1) {
+    display: none;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr td:nth-child(2) {
+    width: 100%;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr td:nth-child(3) {
+    width: 85px;
+    color: #999999;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr td:nth-child(3)::after {
+    content: "|";
+    padding-left: 5px;
+    font-size: 10px;
+    position: absolute;
+    transform: translateY(4px);
+    color: #999999;
+  }
+  main div.main-inner .search-container .search-content-table table tbody tr td:nth-child(4) {
+    width: calc(100% - 85px);
+    color: #999999;
+  }
+}/*# sourceMappingURL=notice.css.map */

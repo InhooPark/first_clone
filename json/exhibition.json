@@ -1,0 +1,28 @@
+{
+    "data" : [
+        {
+            "src": "./img/exhibition/01.jpg",
+            "badge": "특별전시",
+            "title": "경기도박물관 특별전 《경기 사대부의 삶과 격, 지석誌石》",
+            "startdate": "2022-12-07",
+            "enddate": "2023-03-26",
+            "location": "경기도박물관 1층 기획전시실"
+        },
+        {
+            "src": "./img/exhibition/02.jpg",
+            "badge": "온라인전시",
+            "title": "상설전시실 VR 온라인 전시",
+            "startdate": "2020-12-10",
+            "enddate": "2030-12-31",
+            "location": "경기도박물관 상설전시실"
+        },
+        {
+            "src": "./img/exhibition/03.jpg",
+            "badge": "상설전시",
+            "title": "상설 전시",
+            "startdate": "2020-08-04",
+            "enddate": "2025-12-31",
+            "location": "1층, 2층 상설전시실"
+        }
+    ]
+}
