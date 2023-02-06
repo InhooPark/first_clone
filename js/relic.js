@@ -61,6 +61,13 @@ function relicPrint(category = "") {
                 </figcaption>
               </figure>
             </a>
+
+            <div class="relic-popup">
+              <div class="del">X</div>
+              <div class="popup-img-wrap">
+                <img src=${vv.src}>
+              </div>
+            </div>
           </div>
           `;
         }
@@ -69,6 +76,32 @@ function relicPrint(category = "") {
     });
   }
   RELICCONTENT.innerHTML = relicPrintData;
+
+  const target = document.querySelectorAll(".relic-popup");
+  const POPUP = document.querySelectorAll(".grid-item");
+  const POPUPDOWN = document.querySelectorAll(".del");
+  const HEADER = this.document.querySelector("header");
+
+  POPUP.forEach(function (btn, key) {
+    btn.addEventListener(
+      "click",
+      function () {
+        target[key].classList.add("on");
+        HEADER.classList.add("popup-disable");
+      },
+      true
+    );
+  });
+  POPUPDOWN.forEach(function (value, key) {
+    value.addEventListener(
+      "click",
+      function () {
+        target[key].classList.remove("on");
+        HEADER.classList.remove("popup-disable");
+      },
+      false
+    );
+  });
 
   // 프린트 후에 settimeout, (delay)ms 후에 masonry정렬이 들어가게 한다.
   // main에서는 한차례만 정렬하면 괜찮지만 여기서는 json 이용해서 데이터만 바꾸기 때문에
@@ -102,41 +135,30 @@ function masonryfunc() {
   });
 }
 
-window.addEventListener("load", function () {
-  const target = document.querySelectorAll(".relic-popup");
-  /* target.forEach(function(value, key){
-    value.addEventListener('mousewheel', function(e){
-      if(e.deltaY > 0){
-        target[key].style = "filter: brightness(0.5)";
-      }
-      else if(e.deltaY < 0){
-        target[key].style = "filter: brightness(1)";
-      }
-    })
-  }) */
+// window.addEventListener("load", function () {
+//   const target = document.querySelectorAll(".relic-popup");
+//   const POPUP = document.querySelectorAll(".grid-item");
+//   const POPUPDOWN = document.querySelectorAll(".del");
+//   const HEADER = this.document.querySelector("header");
 
-  const POPUP = document.querySelectorAll(".grid-item");
-  const POPUPDOWN = document.querySelectorAll(".del");
-  const HEADER = this.document.querySelector("header");
-
-  POPUP.forEach(function (btn, key) {
-    btn.addEventListener(
-      "click",
-      function () {
-        target[key].classList.add("on");
-        HEADER.classList.add("popup-disable");
-      },
-      true
-    );
-  });
-  POPUPDOWN.forEach(function (value, key) {
-    value.addEventListener(
-      "click",
-      function () {
-        target[key].classList.remove("on");
-        HEADER.classList.remove("popup-disable");
-      },
-      false
-    );
-  });
-});
+//   POPUP.forEach(function (btn, key) {
+//     btn.addEventListener(
+//       "click",
+//       function () {
+//         target[key].classList.add("on");
+//         HEADER.classList.add("popup-disable");
+//       },
+//       true
+//     );
+//   });
+//   POPUPDOWN.forEach(function (value, key) {
+//     value.addEventListener(
+//       "click",
+//       function () {
+//         target[key].classList.remove("on");
+//         HEADER.classList.remove("popup-disable");
+//       },
+//       false
+//     );
+//   });
+// });
