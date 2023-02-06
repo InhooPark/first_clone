@@ -1,9 +1,9 @@
 $("body").prepend("<header>");
 $("body").append("<footer>");
 //head callback 함수는 서브메뉴 페이지로 넘어갔을때 class 추가해서 가시성 높이는 용도 추후 제작
-$("header").load("../inc.html header>div", FOOTERLOAD);
+$("header").load("./inc.html header>div", FOOTERLOAD);
 function FOOTERLOAD() {
-  $("footer").load("../inc.html footer>div", COMMONLOAD);
+  $("footer").load("./inc.html footer>div", COMMONLOAD);
 }
 
 //메일
